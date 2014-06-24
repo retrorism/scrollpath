@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+                <link rel="stylesheet" type="text/css" href="style/detours.css" /> 
+		<link href="http://fonts.googleapis.com/css?family=Terminal+Dosis&subset=latin" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="script/lib/prefixfree.min.js"></script>
+		<!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<meta name="description" content="The plugin that lets you define custom scroll paths" /> 
+		<title>jQuery Scroll Path</title>
+	</head>
+	<body class="detours">
+		<nav>
+			<ul>
+				<li><a href="#start">1</a></li>
+				<li><a href="#info">2</a></li>
+				<li><a href="#pract">3</a></li>
+				<li><a href="#tours">4</a></li>
+				<li><a href="#photos">5</a></li>
+				<li><a href="#landl">6</a></li>
+				<li><a href="#reviews">7</a></li>
+                                <li class="path-settings">
+                                    <a href="" class="path-switch show-path">Show Path</a>
+                                </li>
+			</ul>
+		</nav>
+                <div class="background-wrapper"></div>
+		<div class="wrapper">
+                    <div class="path-page start">
+                            <article>
+                                <span class="identifier">LOGO</span>
+                            </article>
+                    </div><!-- path-page start-->
+
+                    <div class="path-page info">
+                            <article>
+                                <span class="identifier">INFO</span>
+
+                                    <div class="path-page-header">
+
+                                            <h2><?php $info = get_post( 2 ); echo $info->post_title; ?></h2>
+                                    </div>
+                                    <div class="path-page-content">
+                                            <?php $pract = get_post( 5 ); echo $info->post_content; ?>
+                                    </div>
+                                    <hr />
+                            </article>
+                    </div><!-- path-page Info -->
+
+                    <div class="path-page pract">
+                            <article>
+                                <span class="identifier">PRACT</span>
+                                    <div class="path-page-header">
+                                            <h2><?php $pract = get_post( 5 ); echo $pract->post_title; ?></h2>
+                                    </div>
+                                    <div class="path-page-content">
+                                            <?php $pract = get_post( 5 ); echo $pract->post_content; ?>
+                                    </div>
+                                    <hr />
+                            </article>
+                    </div><!-- path-page Practicalities -->
+                    <div class="path-page tours">
+                            <article>
+                                <span class="identifier">TOURS</span>
+                                    <div class="path-page-header">
+                                            <h2><?php $tours = get_post( 7 ); echo $tours->post_title; ?></h2>
+                                    </div>
+                                    <div class="path-page-content">
+                                            <?php $tours = get_post( 7 ); echo $tours->post_content; ?>
+                                    </div>
+                                    <div class="path-page-tab-container">
+                                            <h1>SIDEBAR</h1>
+                                            <div class="path-page-tab-content">
+                                                    <h2><?php $noord = get_post( 19 ); echo $noord->post_title; ?></h2>
+                                                    <?php $noord = get_post( 19 ); echo $noord->post_content; ?><hr />
+                                            </div>
+                                            <div class="path-page-tab-content">
+                                                    <h2><?php $reuse = get_post( 17 ); echo $reuse->post_title; ?></h2>
+                                                    <?php $reuse = get_post( 17 ); echo $reuse->post_content; ?><hr />
+                                            </div>
+                                            <div class="path-page-tab-content">
+                                                    <h2><?php $zoost = get_post( 21 ); echo $zoost->post_title; ?></h2>
+                                                    <?php $zoost = get_post( 21 ); echo $zoost->post_content; ?><hr />
+                                            </div>
+                                    </div><!--page-tab-container-->
+                                    <hr />
+                            </article>
+                    </div><!-- path-page Photos -->
+                    <div class="path-page photos">
+                            <article>
+                                    <div class="path-page-header">
+                                            <h2><?php $tours = get_post( 9 ); echo $tours->post_title; ?></h2>
+                                    </div>
+                                    <div class="path-page-content">
+                                            <?php $tours = get_post( 9 ); echo $tours->post_content; ?>
+                                    </div>
+                                    <hr />
+                            </article>
+                    </div><!-- path-page Photos -->
+                    <div class="path-page landl">
+                            <article>
+                                    <div class="path-page-header">
+                                            <h2><?php $landl = get_post( 11 ); echo $landl->post_title; ?></h2>
+                                    </div>
+                                    <div class="path-page-content">
+                                            <?php $landl = get_post( 11 ); echo $landl->post_content; ?>
+                                    </div>
+                                    <div class="path-page-tab-container">
+                                            <h1>SIDEBAR</h1>
+                                            <div class="path-page-tab-content">
+                                                            <h2><?php $noordbars = get_post( 40 ); echo $noordbars->post_title; ?></h2>
+                                                            <?php $noordbars = get_post( 40 ); echo $noordbars->post_content; ?><hr />
+                                                    </div>
+                                                    <div class="path-page-tab-content">
+                                                            <h2><?php $noordrest = get_post( 17 ); echo $noordrest->post_title; ?></h2>
+                                                            <?php $noordrest = get_post( 17 ); echo $noordrest->post_content; ?><hr />
+                                                    </div>
+                                                    <div class="path-page-tab-content">
+                                                            <h2><?php $noordshop = get_post( 21 ); echo $noordshop->post_title; ?></h2>
+                                                            <?php $noordshop = get_post( 21 ); echo $noordshop->post_content; ?><hr />
+                                                    </div>
+                                            </div><!--page-tab-container-->	
+                                    <hr />
+                            </article>
+                    </div><!-- links and locations (Noord) -->
+
+                    <div class="path-page reviews">
+                    <article>
+                            <div class="path-page-header">
+                                    REVIEWS
+                            </div>
+                    insert posts here
+                    <hr />
+                    </article>
+                    </div><!-- path-page reviews-->
+		</div>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+	<script type="text/javascript" src="script/lib/jquery.easing.js"></script>
+	<script type="text/javascript" src="script/jquery.scrollpath.js"></script>
+	<script type="text/javascript" src="script/detours.js"></script>
+	</body>
+</html>

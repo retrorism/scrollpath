@@ -374,11 +374,12 @@
 		applyPrefix( style, "user-drag", "none" );
 		
 		canvas = $( "<canvas>" ).
+                                        attr("id","detours-canvas").
 					addClass( "sp-canvas" ).
 					css( style ).
 					prependTo( element );
 		
-		canvas[ 0 ].width = pathObject.getPathWidth();
+		canvas[ 0 ].width = (pathObject.getPathWidth()+500);
 		canvas[ 0 ].height = pathObject.getPathHeight();
 		
 		drawCanvasPath( canvas[ 0 ].getContext( "2d" ), pathObject.getCanvasPath() );
